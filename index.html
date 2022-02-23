@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Manage your Personal Finance</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#newRow").click(function(){
+        var addControls="<tr>"
+        addControls+=`<td><input class="inp" type="text" name="empname" placeholder="Enter Desc."></td>`
+        addControls+=`<td><input class="inp" type="text" name="first" placeholder="Enter Category"></td>`
+        addControls+=`<td><input class="inp" type="text" name="first" placeholder="Enter Account Info"></td>`
+        addControls+=`<td><input class="inp" type="text" name="first" placeholder="Enter Amount"></td>`
+        addControls+=`<td><input class="inp" type="text" name="first" placeholder="Enter Date"></td>`
+        addControls+="</tr>";
+        $("table tbody").append(addControls);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <img class="logo" src="./images/logo.png" alt="image">
+    <button id="btn" type="button" class="btn" name="button">Add Items</button>
+  </nav>
+  <div class="main">
+    <h1>Finance History</h1>
+    <div class="box">
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction Description</th>
+            <th>Category</th>
+            <th>Account</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6"><input type="button" id="newRow" class="bts" value="Add New Row"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
